@@ -1,0 +1,13 @@
+version: '3'
+services:
+  local-dev-postgres:
+    image: postgres:9.6-alpine
+    container_name: local-dev-postgres
+    environment:
+      - POSTGRES_DB=timbo
+      - POSTGRES_USER=timbo
+      - POSTGRES_PASSWORD=timbo123
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker-data/postgres:/var/lib/postgresql/data
