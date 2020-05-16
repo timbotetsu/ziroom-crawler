@@ -11,6 +11,6 @@ public class BCAttachment {
     private String title;
     private String text;
     private String color;
-    private List<String> urls = new ArrayList<>();
+    private List<Image> images = new ArrayList<>();
 
 }

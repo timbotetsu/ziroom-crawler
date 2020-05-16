@@ -15,10 +15,10 @@ public interface RoomMapper {
     Room findOne(long id);
 
     @Insert("INSERT INTO ROOM(ID, NAME, PRICE, PHOTO, DESCRIPTION, APARTMENT_TYPE, PRICE_UNIT, PHOTO_ALT, SALE_CLASS, DETAIL_URL, SALE_STATUS, CAN_SIGN_TIME, CAN_SIGN_LONG, RESBLOCK_ID, RESBLOCK_NAME, AGENT_END_DATE)" +
-            " VALUE(#{id}, #{name}, #{price}, #{photo}, #{description}, #{apartmentType}, #{priceUnit}, #{photoAlt}, #{saleClass}, #{detailUrl}, #{saleStatus}, #{canSignTime}, #{canSignLong}, #{resblockId}, #{resblockName}, #{agentEndDate})")
+            " VALUES(#{id}, #{name}, #{price}, #{photo}, #{description}, #{apartmentType}, #{priceUnit}, #{photoAlt}, #{saleClass}, #{detailUrl}, #{saleStatus}, #{canSignTime}, #{canSignLong}, #{resblockId}, #{resblockName}, #{agentEndDate})")
     int save(Room room);
 
     @Delete("DELETE FROM ROOM WHERE ID = #{id}")
-    Room deleteOne(long id);
+    int deleteOne(long id);
 
 }
